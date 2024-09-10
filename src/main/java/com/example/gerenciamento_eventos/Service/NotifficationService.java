@@ -20,6 +20,6 @@ public class NotifficationService {
     }
 
     public void sendEventUpdateAlert(String to, String subject, String text) {
-        sendEventReminder(to, subject, text);  // Pode usar o mesmo método para diferentes tipos de e-mails
+        sendEventReminder(to, subject, text);
     }
 }

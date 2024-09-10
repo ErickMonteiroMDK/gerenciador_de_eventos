@@ -4,7 +4,6 @@ public class HomeModel {
     private String welcomeMessage;
     private int numberOfEvents;
 
-    // Getter e Setter para welcomeMessage
     public String getWelcomeMessage() {
         return welcomeMessage;
     }
@@ -13,7 +12,6 @@ public class HomeModel {
         this.welcomeMessage = welcomeMessage;
     }
 
-    // Getter e Setter para numberOfEvents
     public int getNumberOfEvents() {
         return numberOfEvents;
     }

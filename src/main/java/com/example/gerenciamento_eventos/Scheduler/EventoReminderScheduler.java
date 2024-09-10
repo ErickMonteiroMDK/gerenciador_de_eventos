@@ -19,7 +19,7 @@ public class EventoReminderScheduler {
     @Autowired
     private NotifficationService notificationService;
 
-    @Scheduled(cron = "0 0 8 * * *")  // Executa todos os dias às 08:00
+    @Scheduled(cron = "0 0 8 * * *")
     public void sendDailyReminders() {
         List<EventoModel> events = eventService.listarTodos();
         LocalDate today = LocalDate.now();
@@ -27,7 +27,6 @@ public class EventoReminderScheduler {
 
         for (EventoModel event : events) {
             if (event.getData().equals(tomorrow)) {
-                // Enviar e-mail de lembrete
                 notificationService.sendEventReminder(
                         "user-email@example.com",  // Aqui você deve pegar o e-mail do usuário
                         "Lembrete de Evento: " + event.getTitulo(),

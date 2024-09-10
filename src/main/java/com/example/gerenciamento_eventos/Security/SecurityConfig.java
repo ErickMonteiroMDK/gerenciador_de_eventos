@@ -16,7 +16,7 @@ public class SecurityConfig {
     @Bean
     public InMemoryUserDetailsManager userDetailsManager() {
         UserDetails user = User.withUsername("user")
-                .password("{noop}password")  // {noop} indica que a senha não está criptografada
+                .password("{noop}password")
                 .roles("USER")
                 .build();
         UserDetails admin = User.withUsername("admin")

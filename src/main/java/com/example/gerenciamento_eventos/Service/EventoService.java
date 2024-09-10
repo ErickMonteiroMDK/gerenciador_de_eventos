@@ -49,6 +49,6 @@ public class EventoService {
     }
 
     public List<EventoModel> filtrarEventosPorCategoria(String categoria) {
-        return eventoRepository.findByCategoriaContainingIgnoreCase(categoria);  // Se adicionar o campo 'categoria' ao EventoModel
+        return eventoRepository.findByCategoriaContainingIgnoreCase(categoria);
     }
 }
